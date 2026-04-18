@@ -4,281 +4,204 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock & Sons | Security & Cleaning</title>
-  <meta name="description" content="Rock & Sons provides professional security and cleaning services across the West Midlands. Contact us today for a free quote.">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-      line-height: 1.6;
+      background: #050505;
+      color: #fff;
     }
 
     header {
-      background: #111111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #0d0d0d;
       border-bottom: 1px solid #c8a75b;
-      text-align: center;
-      padding: 25px 20px;
     }
 
     header img {
-      height: 90px;
-      max-width: 100%;
-      margin-bottom: 10px;
+      height: 60px;
     }
 
-    header p {
-      margin: 0;
-      font-size: 18px;
-      color: #ffffff;
+    nav a {
+      color: #c8a75b;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
+      padding: 100px 20px;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
     }
 
     .hero h1 {
+      font-size: 48px;
       color: #c8a75b;
-      font-size: 46px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 750px;
-      margin: 0 auto 20px;
       font-size: 20px;
-    }
-
-    .button-group {
-      margin-top: 30px;
+      max-width: 700px;
+      margin: auto;
     }
 
     .btn {
       display: inline-block;
-      margin: 10px 8px;
+      margin: 15px;
       padding: 14px 28px;
       background: #c8a75b;
-      color: #111111;
+      color: #000;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
+      border-radius: 5px;
     }
 
     .section {
-      max-width: 1100px;
-      margin: auto;
       padding: 60px 20px;
       text-align: center;
     }
 
     .section h2 {
       color: #c8a75b;
-      font-size: 34px;
       margin-bottom: 30px;
     }
 
-    .services,
-    .why-choose {
+    .cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
     }
 
-    .card,
-    .why-box {
-      width: 300px;
-      background: #161616;
+    .card {
+      background: #111;
       border: 1px solid #c8a75b;
+      margin: 10px;
+      padding: 20px;
+      width: 280px;
       border-radius: 10px;
-      padding: 25px;
-      text-align: center;
-    }
-
-    .card h3,
-    .why-box h3 {
-      color: #c8a75b;
-      margin-top: 0;
     }
 
     .contact {
-      background: #111111;
-      border-top: 1px solid #c8a75b;
-      border-bottom: 1px solid #c8a75b;
+      background: #0d0d0d;
       padding: 60px 20px;
       text-align: center;
+      border-top: 1px solid #c8a75b;
     }
 
-    .contact h2 {
-      color: #c8a75b;
-      margin-bottom: 15px;
-      font-size: 34px;
-    }
-
-    .contact a {
-      color: #c8a75b;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    form {
-      margin-top: 25px;
-    }
-
-    input,
-    textarea {
+    input, textarea {
       width: 90%;
-      max-width: 450px;
-      padding: 12px;
-      margin-bottom: 12px;
+      max-width: 400px;
+      padding: 10px;
+      margin: 10px 0;
       border: 1px solid #c8a75b;
-      border-radius: 6px;
-      background: #0f0f0f;
-      color: #ffffff;
-      font-size: 15px;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
+      background: #000;
+      color: #fff;
     }
 
     footer {
       text-align: center;
-      padding: 25px 20px;
+      padding: 20px;
       color: #c8a75b;
-      font-size: 15px;
     }
 
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .section h2,
-      .contact h2 {
-        font-size: 28px;
-      }
-
-      .card,
-      .why-box {
-        width: 100%;
-        max-width: 340px;
+        font-size: 32px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="Rock & Sons Gold Logo.png" alt="Rock & Sons logo">
-    <p>Security & Cleaning</p>
-  </header>
+<header>
+  <img src="Rock & Sons Gold Logo.png">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>Professional Security & Cleaning You Can Trust</h1>
-    <p>Reliable and professional services for homes, businesses, offices, sites and commercial properties.</p>
-    <p>Trusted security and cleaning services across the West Midlands, delivered with professionalism, care and consistency.</p>
+<section class="hero">
+  <h1>Security & Cleaning You Can Trust</h1>
+  <p>Professional services for homes, businesses, offices and commercial sites across the West Midlands.</p>
 
-    <div class="button-group">
-      <a class="btn" href="tel:07503100025">Call for a Free Quote</a>
-      <a class="btn" href="mailto:info@rockandsons.co.uk">Get in Touch</a>
+  <a class="btn" href="tel:07503100025">Call for a Free Quote</a>
+  <a class="btn" href="mailto:info@rockandsons.co.uk">Get in Touch</a>
+</section>
+
+<section id="services" class="section">
+  <h2>Our Services</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Security</h3>
+      <p>Manned guarding, mobile patrols, alarm response and property protection.</p>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Security Services</h3>
-        <p>Site security, mobile patrols, manned guarding, alarm response and property protection for businesses and commercial premises.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cleaning Services</h3>
-        <p>Commercial cleaning, office cleaning, deep cleans, regular contracts and property cleaning delivered to a high standard.</p>
-      </div>
-
-      <div class="card">
-        <h3>Flexible Support</h3>
-        <p>We work with homeowners, landlords, businesses and commercial sites, offering dependable service tailored to your needs.</p>
-      </div>
+    <div class="card">
+      <h3>Cleaning</h3>
+      <p>Commercial, office, deep cleaning and regular contracts.</p>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>Why Clients Choose Us</h2>
-    <div class="why-choose">
-      <div class="why-box">
-        <h3>Professional</h3>
-        <p>Reliable service delivered with care, strong standards and consistent attention to detail.</p>
-      </div>
-
-      <div class="why-box">
-        <h3>Responsive</h3>
-        <p>Fast communication and dependable support when you need it most.</p>
-      </div>
-
-      <div class="why-box">
-        <h3>Trusted</h3>
-        <p>Focused on quality, presentation, safety and customer satisfaction every step of the way.</p>
-      </div>
+    <div class="card">
+      <h3>Flexible Work</h3>
+      <p>Reliable services tailored to your business or property needs.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Call or email us today for a free quote or to discuss your security and cleaning needs.</p>
+<section class="section">
+  <h2>Why Choose Us</h2>
 
-    <p>
-      <strong>07503 100025</strong> / <strong>07743 969626</strong>
-    </p>
+  <div class="cards">
+    <div class="card">
+      <h3>Professional</h3>
+      <p>Consistent high standards across every job.</p>
+    </div>
 
-    <p>
-      📧 <a href="mailto:info@rockandsons.co.uk">info@rockandsons.co.uk</a>
-    </p>
+    <div class="card">
+      <h3>Reliable</h3>
+      <p>We show up, deliver and get the job done properly.</p>
+    </div>
 
-    <p>📍 West Midlands, UK</p>
+    <div class="card">
+      <h3>Trusted</h3>
+      <p>Focused on safety, quality and customer satisfaction.</p>
+    </div>
+  </div>
+</section>
 
-    <form action="https://formspree.io/f/xkokbobn" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <br>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
 
-      <input type="email" name="email" placeholder="Your Email" required>
-      <br>
+  <p><strong>07503 100025</strong> / <strong>07743 969626</strong></p>
 
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <br>
+  <p>
+    <a href="mailto:info@rockandsons.co.uk">
+      info@rockandsons.co.uk
+    </a>
+  </p>
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+  <p>📍 West Midlands, UK</p>
 
-  <footer>
-    <p>Rock & Sons Security & Cleaning</p>
-    <p>Security and cleaning services across the West Midlands</p>
-  </footer>
+  <form action="https://formspree.io/f/xkokbobn" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br>
+    <button class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>Rock & Sons Security & Cleaning</p>
+</footer>
 
 </body>
 </html>
