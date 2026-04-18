@@ -1,206 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock & Sons | Security & Cleaning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #050505;
-      color: #fff;
-    }
+<title>Rock & Sons | Security & Cleaning</title>
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: #0d0d0d;
-      border-bottom: 1px solid #c8a75b;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
 
-    header img {
-      height: 60px;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: black;
+    border-bottom: 1px solid #c8a75b;
+}
 
-    nav a {
-      color: #c8a75b;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header img {
+    height: 60px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-    }
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      color: #c8a75b;
-      margin-bottom: 20px;
-    }
+.btn {
+    background: #c8a75b;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
-    .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-    }
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background: url('hero.jpg') no-repeat center/cover;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 15px;
-      padding: 14px 28px;
-      background: #c8a75b;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+.hero-text {
+    max-width: 50%;
+}
 
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+.hero h1 {
+    font-size: 48px;
+}
 
-    .section h2 {
-      color: #c8a75b;
-      margin-bottom: 30px;
-    }
+.section {
+    padding: 60px;
+    text-align: center;
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    .card {
-      background: #111;
-      border: 1px solid #c8a75b;
-      margin: 10px;
-      padding: 20px;
-      width: 280px;
-      border-radius: 10px;
-    }
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
 
-    .contact {
-      background: #0d0d0d;
-      padding: 60px 20px;
-      text-align: center;
-      border-top: 1px solid #c8a75b;
-    }
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-    input, textarea {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #c8a75b;
-      background: #000;
-      color: #fff;
-    }
+.contact {
+    background: #111;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #c8a75b;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-    }
-  </style>
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #c8a75b;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="Rock & Sons Gold Logo.png">
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <img src="Rock & Sons Gold Logo.png">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Get a Quote</a>
 </header>
 
 <section class="hero">
-  <h1>Security & Cleaning You Can Trust</h1>
-  <p>Professional services for homes, businesses, offices and commercial sites across the West Midlands.</p>
+    <div class="hero-text">
+        <h1>Security & Cleaning You Can Trust</h1>
+        <p>Reliable services for homes, businesses and sites across the West Midlands.</p>
 
-  <a class="btn" href="tel:07503100025">Call for a Free Quote</a>
-  <a class="btn" href="mailto:info@rockandsons.co.uk">Get in Touch</a>
-</section>
-
-<section id="services" class="section">
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Security</h3>
-      <p>Manned guarding, mobile patrols, alarm response and property protection.</p>
+        <a class="btn" href="tel:07503100025">Call Now</a>
+        <a class="btn" href="mailto:info@rockandsons.co.uk">Email Us</a>
     </div>
-
-    <div class="card">
-      <h3>Cleaning</h3>
-      <p>Commercial, office, deep cleaning and regular contracts.</p>
-    </div>
-
-    <div class="card">
-      <h3>Flexible Work</h3>
-      <p>Reliable services tailored to your business or property needs.</p>
-    </div>
-  </div>
 </section>
 
 <section class="section">
-  <h2>Why Choose Us</h2>
+    <h2>Our Services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Professional</h3>
-      <p>Consistent high standards across every job.</p>
-    </div>
+    <div class="services">
 
-    <div class="card">
-      <h3>Reliable</h3>
-      <p>We show up, deliver and get the job done properly.</p>
-    </div>
+        <div class="card">
+            <img src="security.jpg">
+            <h3>Security Services</h3>
+            <p>Manned guarding, patrols and site protection.</p>
+        </div>
 
-    <div class="card">
-      <h3>Trusted</h3>
-      <p>Focused on safety, quality and customer satisfaction.</p>
+        <div class="card">
+            <img src="cleaning.jpg">
+            <h3>Cleaning Services</h3>
+            <p>Commercial and domestic cleaning.</p>
+        </div>
+
+        <div class="card">
+            <img src="patrol.jpg">
+            <h3>Mobile Patrols</h3>
+            <p>Rapid response and regular patrol checks.</p>
+        </div>
+
+        <div class="card">
+            <img src="deepclean.jpg">
+            <h3>Deep Cleaning</h3>
+            <p>One-off and specialist cleaning services.</p>
+        </div>
+
     </div>
-  </div>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
+<section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Call or email us for a free quote</p>
 
-  <p><strong>07503 100025</strong> / <strong>07743 969626</strong></p>
+    <p><strong>07503 100025</strong></p>
 
-  <p>
-    <a href="mailto:info@rockandsons.co.uk">
-      info@rockandsons.co.uk
-    </a>
-  </p>
+    <p>
+        <a href="mailto:info@rockandsons.co.uk" style="color:#c8a75b;">
+            info@rockandsons.co.uk
+        </a>
+    </p>
 
-  <p>📍 West Midlands, UK</p>
+    <!-- FORM -->
+    <form action="https://formspree.io/f/xkokbobn" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
 
-  <form action="https://formspree.io/f/xkokbobn" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required><br>
-    <input type="email" name="email" placeholder="Your Email" required><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br>
-    <button class="btn">Send Message</button>
-  </form>
 </section>
 
 <footer>
-  <p>Rock & Sons Security & Cleaning</p>
+    <p>© Rock & Sons Security & Cleaning</p>
 </footer>
 
 </body>
