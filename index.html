@@ -1,176 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock & Sons | Security & Cleaning</title>
+  <meta name="description" content="Professional security and cleaning services across the West Midlands. Contact Rock & Sons for a free quote.">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<title>Rock & Sons | Security & Cleaning</title>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #070707;
+      color: #ffffff;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: white;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: black;
-    border-bottom: 1px solid #c8a75b;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-header img {
-    height: 60px;
-}
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
+    .gold {
+      color: #d7a548;
+    }
 
-.btn {
-    background: #c8a75b;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
 
-.hero {
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background: url('hero.jpg') no-repeat center/cover;
-}
+    .btn-primary {
+      background: #d7a548;
+      color: #111;
+      border: 1px solid #d7a548;
+    }
 
-.hero-text {
-    max-width: 50%;
-}
+    .btn-primary:hover {
+      opacity: 0.92;
+    }
 
-.hero h1 {
-    font-size: 48px;
-}
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #d7a548;
+    }
 
-.section {
-    padding: 60px;
-    text-align: center;
-}
+    .btn-outline:hover {
+      background: rgba(215, 165, 72, 0.08);
+    }
 
-.services {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 7, 7, 0.96);
+      border-bottom: 1px solid #a97925;
+      backdrop-filter: blur(8px);
+    }
 
-.card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 88px;
+      gap: 20px;
+    }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
 
-.contact {
-    background: #111;
-}
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #c8a75b;
-}
-</style>
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: #d7a548;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #d7a548;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    nav a {
+      color: #f2f2f2;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d7a548;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      border-bottom: 1px solid #a97925;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.78) 38%, rgba(0,0,0,0.25) 70%, rgba(0,0,0,0.15) 100%),
+        url("images/hero.jpg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      min-height: 720px;
+      gap: 20px;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      padding: 40px 0;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.02;
+      margin: 0 0 24px;
+      font-weight: 800;
+    }
+
+    .hero-copy p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #ededed;
+      margin: 0 0 28px;
+      max-width: 560px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      margin-top: 8px;
+    }
+
+    .hero-point {
+      position: relative;
+      padding-right: 24px;
+    }
+
+    .hero-point:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 4px;
+      height: 36px;
+      width: 1px;
+      background: rgba(215, 165, 72, 0.4);
+    }
+
+    .hero-point strong {
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    .hero-point span {
+      display: block;
+      color: #d7a548;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: #d7a548;
+      font-size: clamp(34px, 5vw, 54px);
+      font-weight: 800;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #0f0f0f;
+      border: 1px solid rgba(215, 165, 72, 0.45);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .service-card-content {
+      padding: 22px 20px 24px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: #d9d9d9;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .trust-strip {
+      margin-top: 34px;
+      border-top: 1px solid rgba(215, 165, 72, 0.28);
+      border-bottom: 1px solid rgba(215, 165, 72, 0.28);
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .trust-icon {
+      min-width: 48px;
+      min-height: 48px;
+      border: 1px solid #d7a548;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #d7a548;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .trust-item h4 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .trust-item p {
+      margin: 0;
+      color: #d8d8d8;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .bottom-contact {
+      padding: 0 0 72px;
+    }
+
+    .bottom-contact-box {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      background: #090909;
+      border-top: 1px solid rgba(215, 165, 72, 0.28);
+      border-bottom: 1px solid rgba(215, 165, 72, 0.28);
+      overflow: hidden;
+    }
+
+    .service-area,
+    .contact-info {
+      padding: 48px 42px;
+    }
+
+    .service-area {
+      border-right: 1px solid rgba(215, 165, 72, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .service-area .pin {
+      color: #d7a548;
+      font-size: 52px;
+      line-height: 1;
+    }
+
+    .service-area h3,
+    .contact-info h3 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+
+    .service-area p,
+    .contact-info p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ededed;
+    }
+
+    .contact-flex {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .contact-line .icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #d7a548;
+      display: grid;
+      place-items: center;
+      color: #d7a548;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(215, 165, 72, 0.3);
+    }
+
+    .contact-form-wrap {
+      padding: 0 0 80px;
+    }
+
+    .contact-form-box {
+      background: #0f0f0f;
+      border: 1px solid rgba(215, 165, 72, 0.35);
+      border-radius: 16px;
+      padding: 34px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .contact-form-box h3 {
+      margin: 0 0 22px;
+      text-align: center;
+      color: #d7a548;
+      font-size: 30px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(215, 165, 72, 0.35);
+      background: #090909;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+    }
+
+    footer {
+      border-top: 1px solid rgba(215, 165, 72, 0.25);
+      padding: 24px 0 36px;
+      text-align: center;
+      color: #d9d9d9;
+      font-size: 15px;
+    }
+
+    @media (max-width: 1100px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bottom-contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .service-area {
+        border-right: none;
+        border-bottom: 1px solid rgba(215, 165, 72, 0.2);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding: 60px 0;
+      }
+
+      .hero-copy h1 {
+        font-size: 44px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: 94%;
+      }
+
+      .hero-copy h1 {
+        font-size: 38px;
+      }
+
+      .hero-copy p {
+        font-size: 18px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .services-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-area,
+      .contact-info {
+        padding: 32px 22px;
+      }
+
+      .contact-flex {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image img {
+        height: 200px;
+      }
+
+      .contact-form-box {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <img src="Rock & Sons Gold Logo.png">
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-    <a class="btn" href="#contact">Get a Quote</a>
-</header>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <img src="Rock & Sons Gold Logo.png" alt="Rock & Sons logo">
+        <div class="brand-text">
+          <strong>ROCK & SONS</strong>
+          <span>Security &amp; Cleaning</span>
+        </div>
+      </a>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Security & Cleaning You Can Trust</h1>
-        <p>Reliable services for homes, businesses and sites across the West Midlands.</p>
+      <nav>
+        <ul>
+          <li><a class="active" href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-        <a class="btn" href="tel:07503100025">Call Now</a>
-        <a class="btn" href="mailto:info@rockandsons.co.uk">Email Us</a>
+      <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
     </div>
-</section>
+  </header>
 
-<section class="section">
-    <h2>Our Services</h2>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <h1>
+            Professional<br>
+            <span class="gold">Security &amp; Cleaning</span><br>
+            You Can Trust
+          </h1>
 
-    <div class="services">
+          <p>
+            Reliable, professional and dedicated services for homes, businesses and
+            commercial properties across the West Midlands.
+          </p>
 
-        <div class="card">
-            <img src="security.jpg">
-            <h3>Security Services</h3>
-            <p>Manned guarding, patrols and site protection.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="tel:07503100025">📞 Call 07503 100025</a>
+            <a class="btn btn-outline" href="mailto:info@rockandsons.co.uk">✉️ Email Us</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <span>🛡</span>
+              <strong>Trusted</strong>
+            </div>
+            <div class="hero-point">
+              <span>✓</span>
+              <strong>Professional</strong>
+            </div>
+            <div class="hero-point">
+              <span>★</span>
+              <strong>Reliable</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-            <img src="cleaning.jpg">
-            <h3>Cleaning Services</h3>
-            <p>Commercial and domestic cleaning.</p>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
         </div>
 
-        <div class="card">
-            <img src="patrol.jpg">
-            <h3>Mobile Patrols</h3>
-            <p>Rapid response and regular patrol checks.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="images/security.jpg" alt="Security services">
+            <div class="service-card-content">
+              <h3>Security Services</h3>
+              <p>Site security, manned guarding, patrols and alarm response for commercial and private premises.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/cleaning.jpg" alt="Cleaning services">
+            <div class="service-card-content">
+              <h3>Cleaning Services</h3>
+              <p>Commercial, office and property cleaning delivered to a high standard with reliable service.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/hero.jpg" alt="Mobile patrols">
+            <div class="service-card-content">
+              <h3>Mobile Patrols</h3>
+              <p>Regular patrol checks, visible deterrence and dependable support for sites and properties.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="images/deep-clean.jpg" alt="Deep cleaning">
+            <div class="service-card-content">
+              <h3>Deep Cleaning</h3>
+              <p>One-off deep cleans and specialist cleaning for spaces that need extra attention and care.</p>
+            </div>
+          </article>
         </div>
 
-        <div class="card">
-            <img src="deepclean.jpg">
-            <h3>Deep Cleaning</h3>
-            <p>One-off and specialist cleaning services.</p>
+        <div class="trust-strip" id="about">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <div class="trust-icon">🛡</div>
+              <div>
+                <h4>Local &amp; Trusted</h4>
+                <p>West Midlands based and focused on dependable service.</p>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">👥</div>
+              <div>
+                <h4>Experienced Team</h4>
+                <p>Professional presentation and a reliable approach every time.</p>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">⏰</div>
+              <div>
+                <h4>Flexible Availability</h4>
+                <p>Support for regular work, one-off jobs and ongoing contracts.</p>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">✔</div>
+              <div>
+                <h4>Quality Guaranteed</h4>
+                <p>High standards, clear communication and customer-focused service.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <section class="bottom-contact">
+      <div class="container">
+        <div class="bottom-contact-box">
+          <div class="service-area">
+            <div class="pin">📍</div>
+            <div>
+              <h3>Proudly serving clients across the <span class="gold">West Midlands</span></h3>
+              <p>Professional security and cleaning support for homes, businesses, offices and commercial properties.</p>
+            </div>
+          </div>
 
-<section class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Call or email us for a free quote</p>
+          <div class="contact-info" id="contact">
+            <h3>Get in Touch</h3>
 
-    <p><strong>07503 100025</strong></p>
+            <div class="contact-flex">
+              <div class="contact-lines">
+                <div class="contact-line">
+                  <div class="icon">📞</div>
+                  <span>07503 100025 / 07743 969626</span>
+                </div>
 
-    <p>
-        <a href="mailto:info@rockandsons.co.uk" style="color:#c8a75b;">
-            info@rockandsons.co.uk
-        </a>
-    </p>
+                <div class="contact-line">
+                  <div class="icon">✉</div>
+                  <span>info@rockandsons.co.uk</span>
+                </div>
 
-    <!-- FORM -->
-    <form action="https://formspree.io/f/xkokbobn" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required><br><br>
-        <input type="email" name="email" placeholder="Your Email" required><br><br>
-        <textarea name="message" placeholder="Your Message" required></textarea><br><br>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
+                <div class="contact-line">
+                  <div class="icon">📍</div>
+                  <span>West Midlands, UK</span>
+                </div>
+              </div>
 
-</section>
+              <div class="contact-image">
+                <img src="images/van.jpg" alt="Rock & Sons vehicle">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    <p>© Rock & Sons Security & Cleaning</p>
-</footer>
+    <section class="contact-form-wrap">
+      <div class="container">
+        <div class="contact-form-box">
+          <h3>Request a Free Quote</h3>
+
+          <form action="https://formspree.io/f/xkokbobn" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell us what service you need" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Rock &amp; Sons Security &amp; Cleaning
+  </footer>
 
 </body>
 </html>
